@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/gotop"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/BottomGreen"
+        >
+
+        <TextView
+            android:id="@+id/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绿出行"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:background="@color/BottomGreen"
+            android:textColor="@color/White"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="城市"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            android:id="@+id/citylist"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp" />
+    </RelativeLayout>
+    <FrameLayout
+        android:background="@color/White"
+        android:layout_below="@+id/gotop"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/frameLayout"></FrameLayout>
+    <RelativeLayout
+        android:id="@+id/go_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotop"
+        android:layout_alignParentBottom="true"
+        >
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/go_imageView"
+            android:src="@drawable/go"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="34px" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hao.bond.mytrip.MainActivity">
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bottomline">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottomline"
+        android:background="@color/BottomGrey"
+        android:layout_above="@+id/main_tab_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="1px"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/main_tab_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_tab_go"
+            style="@style/BottomFour"
+            android:drawableTop="@drawable/maingo"
+            android:text="出行"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/main_tab_find"
+            style="@style/BottomFour"
+            android:drawableTop="@drawable/mainfind"
+            android:text="发现"
+            android:textColor="@color/BottomGrey"/>
+        <RadioButton
+            android:id="@+id/main_tab_mine"
+            style="@style/BottomFour"
+            android:drawableTop="@drawable/mainmy"
+            android:text="我的"
+            />
+    </RadioGroup>
+
+</RelativeLayout>
